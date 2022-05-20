@@ -1,13 +1,13 @@
 <template>
     <div class="home rflex">
-      <top_menu></top_menu>
-        <div class="menu_right wflex el-scrollbar" ref="menu_right" width="200px">
-          <left_menu class="leftMenu"></left_menu>
-          <div class="menu_content" ref="menu_content">
+      <left_menu class="leftMenu"></left_menu>
+      <div class="menu_right wflex el-scrollbar" ref="menu_right" width="200px">
+        <top_menu></top_menu>
+        <div class="menu_content" ref="menu_content">
                 <router-view></router-view><!--页面渲染入口-->
             </div>
-        </div>
-      <my_footer></my_footer>
+<!--        <my_footer></my_footer>-->
+      </div>
     </div>
 </template>
 
@@ -44,16 +44,17 @@
 }
 .leftMenu{
   width: 200px;
-  background: antiquewhite;
+  min-height: 100vh;
+  background: #1a263a;
+  float: left;
 }
 .menu_right {
-  display: flex;
-  width: calc(100%);
+  width: calc(100% - 201px);
+  float: right;
 }
 .menu_content {
-  width: calc(100%  - 200px);
-  padding: 25px;
-  background: rgba(0,0,0,0.05);
-  min-height: calc(100vh - 160px);
+  padding: 20px;
+  background: #f5f7fa;
+  min-height: calc(100vh - 90px);
 }
 </style>

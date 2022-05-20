@@ -25,7 +25,7 @@ export const constantRouterMap = [
   {path: '/login', name: 'login', component: () => import('@/page/login/index'), hidden: false},
   {
     path: '',
-    name: '首页',
+    name: '',
     component: HomeLayout,
     meta: {
     },
@@ -33,7 +33,7 @@ export const constantRouterMap = [
     children: [
       {
           path: 'home',
-          name: 'home',
+          name: '首页',
           meta: {
           },
           component: () => import('@/page/home/index'),
@@ -55,6 +55,41 @@ export const constantRouterMap = [
          meta: {
         },
         component: () => import('@/page/manage/adduser'),
+      },
+      {
+        path: 'warehouseManagement/invoiceEntry',
+        name: 'invoiceEntry',
+        meta: {
+        },
+        component: () => import('@/page/warehouseManagement/invoiceEntry'),
+      },
+      {
+        path: 'warehouseManagement/invoiceManagement',
+        name: 'invoiceManagement',
+        meta: {
+        },
+        component: () => import('@/page/warehouseManagement/invoiceManagement'),
+      },
+      {
+        path: 'warehouseManagement/receivingRegistration',
+        name: 'receivingRegistration',
+        meta: {
+        },
+        component: () => import('@/page/warehouseManagement/receivingRegistration'),
+      },
+      {
+        path: 'warehouseManagement/installingBracketRecord',
+        name: 'installingBracketRecord',
+        meta: {
+        },
+        component: () => import('@/page/warehouseManagement/installingBracketRecord'),
+      },
+      {
+        path: 'warehouseManagement/shelvesManagement',
+        name: 'shelvesManagement',
+        meta: {
+        },
+        component: () => import('@/page/warehouseManagement/shelvesManagement'),
       },
     ]
   },
